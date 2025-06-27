@@ -1,11 +1,14 @@
 # Comsys_Hackathon
+Face recognition algorithms often demonstrate degraded performance when confronted with images captured in non-ideal environments such as in blur, fog, rain, low-light, or overexposed scenes. To bridge this gap, participants will develop models that maintain consistent performance despite these challenges. Additionally, a concurrent task of gender classification is included to evaluate the robustness of feature representations across different semantic attributes.
+
+Dataset: FACECOM
+FACECOM (Face Attributes in Challenging Environments) is a purpose-built dataset designed for evaluating face analysis algorithms under real-world visual degradations. The dataset includes more than 5,000 face images, either captured or synthesized under a range of challenging conditions.
 
 This repository contains the complete implementation for both tasks of the COMSYS Hackathon-5 challenge:
 
 - 🔹 **Task A:** Gender Classification using CNN
 - 🔹 **Task B:** Face Verification under Adverse Visual Conditions using FaceNet and Metric Learning
 
----
 
 ## Repository Structure
 
