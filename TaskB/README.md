@@ -46,5 +46,5 @@ These metrics are computed on the validation set using the threshold that gives 
 
 ## Contributors
 
-Sneha Purakayastha
-Bhumika Hazra
+-Sneha Purakayastha(https://github.com/SnehaPurakayastha04)
+-Bhumika Hazra(https://github.com/Bhumika0305)
