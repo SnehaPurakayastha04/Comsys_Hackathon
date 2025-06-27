@@ -117,7 +117,7 @@ val/
 | Recall     | 0.9500  |
 | F1-Score   | 0.9650  |
 
-### ✅ Task B (Face Verification)
+### Task B (Face Verification)
 | Metric     | Value   |
 |------------|---------|
 | Accuracy   | 0.9910  |
