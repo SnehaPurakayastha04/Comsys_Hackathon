@@ -37,63 +37,14 @@ train/
 
 These metrics are computed on the validation set using the threshold that gives the *best F1-score*.
 
-
 ## How to Run
 
-> The code is written and tested in *Google Colab*
+- Open the notebook: comsys(task_b)(1).ipynb
+- Mount your Google Drive if needed
+- Set train_dir and val_dir to the correct dataset paths
+- Run all cells
 
-1. Open the notebook: TaskB_Face_Verification.ipynb
+## Contributors
 
-2. Install required libraries (automated in the notebook):
-
-!pip install torch torchvision facenet-pytorch scikit-learn matplotlib pandas --quiet
-Set the dataset paths:
-
-python
-Copy code
-train_dir = '/content/drive/MyDrive/Comys_Hackathon52/Task_B/train'
-val_dir   = '/content/drive/MyDrive/Comys_Hackathon52/Task_B/val'
-Run all cells:
-
-The notebook will extract embeddings, compute cosine similarity, generate negative matches, and evaluate metrics.
-
-The final results will be printed as:
-
-yaml
-Copy code
-Evaluation on Validation Set:
-Accuracy : 0.XXXX
-Precision: 0.XXXX
-Recall   : 0.XXXX
-F1-Score : 0.XXXX
-💾 Model Files
-FaceNet model is loaded from facenet-pytorch (no need to upload separately)
-
-If any .pth file is used for custom layers, it may be linked from Google Drive:
-
-markdown
-Copy code
-🔗 [Download taskB_model.pth](https://drive.google.com/your_link_here)
-📁 Output Files
-The script saves results as CSVs:
-
-train_verification_results.csv
-
-val_verification_results.csv
-
-Each contains:
-
-Person ID
-
-Distorted image name
-
-Similarity score
-
-Reference ID
-
-Label (1: match, 0: non-match)
-
-👥 Contributors
-Your Name
-
-Friend’s Name
+Sneha Purakayastha
+Bhumika Hazra
