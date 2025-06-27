@@ -52,7 +52,7 @@ After training and validation, the following metrics are computed:
 
 - Pretrained weights: `taskA_model.pth` 
 
-## 🧑‍💻 Contributors
+## Contributors
 
 - Sneha Purakayastha(https://github.com/SnehaPurakayastha04)
 - Bhumika Hazra(https://github.com/Bhumika0305)
