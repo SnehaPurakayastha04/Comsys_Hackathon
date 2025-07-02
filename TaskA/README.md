@@ -52,8 +52,8 @@ After training and validation, the following metrics are computed:
 
 ##  Model File
 
-- Pretrained weights: `taskA_model.pth`
-  https://drive.google.com/file/d/1Nx55BJfDXcaLGP9EZx2i8iZrzqDcP2TG/view?usp=sharing
+Download the pre-trained model here.
+ [model.pth(Google Drive)](https://drive.google.com/file/d/1Nx55BJfDXcaLGP9EZx2i8iZrzqDcP2TG/view?usp=sharing)
   
 ## Contributors
 
