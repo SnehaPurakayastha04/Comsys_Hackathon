@@ -30,7 +30,7 @@ train/
 
 ## Evaluation Metrics
 
-- Accuracy  : 0.9910
+- Accuracy  : 0.9913
 - Precision : 1.0000
 - Recall    : 0.9890
 - F1-Score  : 0.9945
@@ -41,7 +41,7 @@ These metrics are computed on the validation set using the threshold that gives 
 
 ## How to Run
 
-- Open the notebook: comsys(task_b)(1).ipynb
+- Open the notebook: Train_Code(TaskB).ipynb and Test_Code(TaskB).ipynb
 - Mount your Google Drive if needed
 - Set train_dir and val_dir to the correct dataset paths
 - Run all cells
