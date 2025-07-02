@@ -112,15 +112,15 @@ val/
 ### Task A (Gender Classification)
 | Metric     | Value   |
 |------------|---------|
-| Accuracy   | 0.9763  |
-| Precision  | 0.9850  |
-| Recall     | 0.9500  |
-| F1-Score   | 0.9650  |
+| Accuracy   | 0.9739  |
+| Precision  | 0.9738  |
+| Recall     | 0.9739  |
+| F1-Score   | 0.9738  |
 
 ### Task B (Face Verification)
 | Metric     | Value   |
 |------------|---------|
-| Accuracy   | 0.9910  |
+| Accuracy   | 0.9913  |
 | Precision  | 1.0000  |
 | Recall     | 0.9890  |
 | F1-Score   | 0.9945  |
