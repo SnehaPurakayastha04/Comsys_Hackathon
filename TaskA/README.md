@@ -47,6 +47,7 @@ After training and validation, the following metrics are computed:
 - **Recall**
 - **F1-Score**
 - **Confusion Matrix**
+    ![Screenshot 2025-06-27 120955](https://github.com/user-attachments/assets/32150966-2380-458a-9917-d14de576e606)
 
 ##  Model File
 
