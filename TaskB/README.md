@@ -46,8 +46,8 @@ These metrics are computed on the validation set using the threshold that gives 
 - Run all cells
 
 ## Model Weights
-Download the pre-trained model here
-[model.pth(Google Drive](https://drive.google.com/file/d/1_QmNYeHkYxOLZ8-gjS6gB7p5NyolGZjB/view?usp=sharing)
+Download the pre-trained model here.
+[model.pth(Google Drive)](https://drive.google.com/file/d/1_QmNYeHkYxOLZ8-gjS6gB7p5NyolGZjB/view?usp=sharing)
 
 ## Contributors
 
