@@ -1,5 +1,5 @@
 # Comsys_Hackathon
-Face recognition algorithms often demonstrate degraded performance when confronted with images captured in non-ideal environments such as in blur, fog, rain, low-light, or overexposed scenes. To bridge this gap, participants will develop models that maintain consistent performance despite these challenges. Additionally, a concurrent task of gender classification is included to evaluate the robustness of feature representations across different semantic attributes.
+Face recognition algorithms often demonstrate degraded performance when confronted with images captured in non-ideal environments such as in blur, fog, rain, low-light, or overexposed scenes. To bridge this gap, we developed models that maintain consistent performance despite these challenges. Additionally, a concurrent task of gender classification is included to evaluate the robustness of feature representations across different semantic attributes.
 
 
 This repository contains the complete implementation for both tasks of the COMSYS Hackathon-5 challenge:
