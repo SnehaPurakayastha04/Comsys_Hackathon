@@ -53,11 +53,6 @@ After training and validation, the following metrics are computed:
     ![Screenshot 2025-07-02 235553](https://github.com/user-attachments/assets/87f096fc-7b2d-40ac-867c-81b9c14bc7da)
 
 
-##  Model File
-
-Download the pre-trained model here.
- [model.pth(Google Drive)](https://drive.google.com/file/d/11EJ9J02rdOzUovpGogrnzkcnZJsfIX7b/view?usp=sharing)
-
 ##  Best Gender Model
 
 Download best gender model here.
