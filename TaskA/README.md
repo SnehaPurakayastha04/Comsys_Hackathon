@@ -2,7 +2,7 @@
 
 This task involves classifying face images as **Male** or **Female** using a Convolutional Neural Network (CNN).
 
-## This repository contains solutions both Task A of the Comsys Hackathon. All required model weights, training/validation results, and instructions are included inside the respective task folders.
+## This repository contains solutions both Task A of the Comsys Hackathon. All required model weights, training/validation results, and instructions are included inside this file.
 
 ##  Dataset Structure
 
