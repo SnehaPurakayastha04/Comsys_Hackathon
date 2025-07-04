@@ -4,8 +4,8 @@ Face recognition algorithms often demonstrate degraded performance when confront
 
 This repository contains the complete implementation for both tasks of the COMSYS Hackathon-5 challenge:
 
-- 🔹 **Task A:** Gender Classification using CNN
-- 🔹 **Task B:** Face Verification under Adverse Visual Conditions using FaceNet and Metric Learning
+-  **Task A:** Gender Classification using CNN
+-  **Task B:** Face Verification under Adverse Visual Conditions using FaceNet and Metric Learning
 
 
 ## Repository Structure
