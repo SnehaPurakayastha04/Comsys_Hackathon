@@ -30,10 +30,10 @@ train/
 
 ## Evaluation Metrics
 
-- Accuracy  : 0.9913
-- Precision : 1.0000
+- Accuracy  : 0.9836
+- Precision : 0.9890
 - Recall    : 0.9890
-- F1-Score  : 0.9945
+- F1-Score  : 0.9890
 
 These metrics are computed on the validation set using the threshold that gives the *best F1-score*.
 ![Screenshot 2025-07-02 235628](https://github.com/user-attachments/assets/e43ee7c2-d0aa-4e21-9f6a-75993b8b1e12)
