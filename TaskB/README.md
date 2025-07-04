@@ -2,6 +2,8 @@
 
 This task addresses face verification, determining whether a distorted face image belongs to the same person as a clean reference image. The approach is based on *FaceNet embeddings* and *cosine similarity*, using metric learning concepts rather than classification.
 
+## This repository contains solutions for Task B of the Comsys Hackathon. All required model weights, training/validation results, and instructions are included inside this file.
+
 
 ## Dataset Structure
 
