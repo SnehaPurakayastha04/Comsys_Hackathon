@@ -44,10 +44,10 @@ dataset/
 
 After training and validation, the following metrics are computed:
 
-- **Accuracy**
-- **Precision**
-- **Recall**
-- **F1-Score**
+- **Accuracy** : 0.9739
+- **Precision**: 0.9738
+- **Recall**   : 0.9739
+- **F1-Score** : 0.9738
 - **Confusion Matrix**
   
     ![Screenshot 2025-07-02 235553](https://github.com/user-attachments/assets/87f096fc-7b2d-40ac-867c-81b9c14bc7da)
