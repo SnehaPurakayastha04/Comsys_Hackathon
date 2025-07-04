@@ -120,11 +120,11 @@ val/
 ### Task B (Face Verification)
 | Metric     | Value   |
 |------------|---------|
-| Accuracy   | 0.9913  |
-| Precision  | 1.0000  |
+| Accuracy   | 0.9836  |
+| Precision  | 0.9890  |
 | Recall     | 0.9890  |
-| F1-Score   | 0.9945  |
-| Best Threshold | 0.40 |
+| F1-Score   | 0.9890  |
+| Best Threshold | 0.43 |
 
 ## Contributors
 
