@@ -51,7 +51,7 @@ These metrics are computed on the validation set using the threshold that gives 
 
 ## Model Weights
 Download the pre-trained model here.
-[model.pth(Google Drive)](https://drive.google.com/file/d/1AqHqQsepm7iyT45-cI4DnhqnL_0J_lBi/view?usp=sharing)
+[taskB_model.pth(Google Drive)](https://drive.google.com/file/d/1AqHqQsepm7iyT45-cI4DnhqnL_0J_lBi/view?usp=sharing)
 
 ## Contributors
 
