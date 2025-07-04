@@ -62,10 +62,10 @@ Early Stopping based on validation accuracy
 
 ## Instructions to Run
 cd TaskA
-# Run training (Google Colab preferred)
+## Run training (Google Colab preferred)
 Train_Code(TaskA).ipynb
 
-# Run evaluation
+## Run evaluation
 Test_Code(TaskA).ipynb
 
 ---
