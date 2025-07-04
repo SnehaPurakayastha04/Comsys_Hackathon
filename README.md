@@ -60,6 +60,14 @@ Early Stopping based on validation accuracy
 - `taskA_model.pth` – Pretrained weights
 - `README.md` – Task A overview and instructions
 
+## Instructions to Run
+cd TaskA
+# Run training (Google Colab preferred)
+Train_Code(TaskA).ipynb
+
+# Run evaluation
+Test_Code(TaskA).ipynb
+
 ---
 
 ## Task B: Face Verification
@@ -109,12 +117,13 @@ val/
 
 > You can open and run each task's notebook directly in **Google Colab**.
 
-### Run in Colab
-1. Open the notebook (e.g., `TaskA_Gender_Classification.ipynb`)
-2. Mount your Google Drive if needed
-3. Update dataset paths (`train_dir`, `val_dir`)
-4. Run all cells
-5. Metrics will be printed at the end
+## Instructions to Run
+cd TaskB
+# Run verification & save CSVs
+Train_Code(TaskB).ipynb
+
+# Evaluate metrics using optimal threshold
+Test_Code(TaskB).ipynb
 
 ---
 
