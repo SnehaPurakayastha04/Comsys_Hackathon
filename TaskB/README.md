@@ -36,8 +36,8 @@ train/
 - F1-Score  : 0.9890
 
 These metrics are computed on the validation set using the threshold that gives the *best F1-score*.
-![Screenshot 2025-07-02 235628](![Screenshot 2025-07-04 213859](https://github.com/user-attachments/assets/bee81729-a1dd-4836-94af-3ef0afae4fc1)
-)
+![Screenshot 2025-07-02 235628](https://github.com/user-attachments/assets/bee81729-a1dd-4836-94af-3ef0afae4fc1)
+
 
 
 ## How to Run
