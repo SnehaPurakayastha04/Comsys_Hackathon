@@ -119,17 +119,17 @@ val/
 
 ## Instructions to Run
 cd TaskB
-# Run verification & save CSVs
+## Run verification & save CSVs
 Train_Code(TaskB).ipynb
 
-# Evaluate metrics using optimal threshold
+## Evaluate metrics using optimal threshold
 Test_Code(TaskB).ipynb
 
 ---
 
 ##  Results Summary
 
-### Task A (Gender Classification)
+## Task A (Gender Classification)
 | Metric     | Value   |
 |------------|---------|
 | Accuracy   | 0.9739  |
