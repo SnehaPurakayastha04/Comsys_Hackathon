@@ -37,6 +37,17 @@ val/
 ├── Male/
 ├── Female/
 
+## Approach
+Base model: ResNet50 (pretrained on ImageNet)
+Final layers replaced with:
+Linear(in_features, 256)
+ReLU activation
+Dropout(0.5)
+Linear(256, 2)
+Label smoothing with CrossEntropyLoss(label_smoothing=0.1)
+Optimizer: AdamW with learning rate decay via StepLR
+Regularization via Dropout + Data augmentation
+Early Stopping based on validation accuracy
 
 ###  Evaluation Metrics:
 - Accuracy
