@@ -54,12 +54,12 @@ After training and validation, the following metrics are computed:
 
 ## Model Weights
 Download the pre-trained model here.
-[taskA_model.pth(Google Drive)](https://drive.google.com/file/d/11EJ9J02rdOzUovpGogrnzkcnZJsfIX7b/view?usp=sharing)
+[taskA_model.pth(Google Drive)](https://drive.google.com/file/d/1XieLM15TYgOYpAZZd2u0-45m3P8KVb_u/view?usp=sharing)
 
 ##  Best Gender Model
 
 Download best gender model here.
-[best_gender_model.pth(Google Drive)](https://drive.google.com/file/d/1Gu5I39dwx--IGKLM_QtQ6MByF4mBKqnX/view?usp=sharing)
+[best_gender_model.pth(Google Drive)](https://drive.google.com/file/d/1U5ym2yO7IDumm9TrDusCn8xZpxnTvuet/view?usp=sharing)
 
 ## Contributors
 
