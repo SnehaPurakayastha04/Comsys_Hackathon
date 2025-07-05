@@ -60,7 +60,7 @@ Best Threshold: 0.44
 
 ## Model Weights
 Download the pre-trained model here.
-[taskB_model.pth(Google Drive)](https://drive.google.com/file/d/1AqHqQsepm7iyT45-cI4DnhqnL_0J_lBi/view?usp=sharing)
+[taskB_model.pth(Google Drive)](https://drive.google.com/file/d/1lrgSgV2Bado7IATlQJEHL5o3ENDaSL6m/view?usp=sharing)
 
 ## Contributors
 
