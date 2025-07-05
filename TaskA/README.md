@@ -49,7 +49,8 @@ dataset/
 - **F1-Score** : 0.9760
 - **Train Set Confusion Matrix**
 
-![Screenshot 2025-07-05 143915](https://github.com/user-attachments/assets/28408579-6646-453b-8b1b-f7bade90ac55)
+![final_cropped_confusion_matrix](https://github.com/user-attachments/assets/6c70340c-e0bb-4590-8d01-9d3d8745724a)
+
 
 ### Evaluation on Validation Set:
 - **Accuracy** : 0.9739
