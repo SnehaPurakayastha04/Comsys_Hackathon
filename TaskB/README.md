@@ -31,15 +31,24 @@ train/
 - A *similarity threshold* is tuned on validation data to determine match
 
 ## Evaluation Metrics
+## Evaluation on Train Set:
+Best Threshold: 0.44
+- Accuracy  : 0.9888
+- Precision : 0.9964
+- Recall    : 0.9893
+- F1-Score  : 0.9929
 
-- Accuracy  : 0.9836
-- Precision : 0.9890
-- Recall    : 0.9890
-- F1-Score  : 0.9890
+![Screenshot 2025-07-05 090938](https://github.com/user-attachments/assets/882b4b06-f035-488c-8402-8ef48712be2a)
 
-These metrics are computed on the validation set using the threshold that gives the *best F1-score*.
-![Screenshot 2025-07-02 235628](https://github.com/user-attachments/assets/bee81729-a1dd-4836-94af-3ef0afae4fc1)
 
+ ## Evaluation on Validation Set:
+ Best Threshold: 0.39
+ - Accuracy  : 0.9880
+ - Precision : 0.9945
+ - Recall    : 0.9890
+ - F1-Score  : 0.9917
+
+![Screenshot 2025-07-05 091010](https://github.com/user-attachments/assets/48e0e47a-39c7-41e1-8c50-a82cd3e2b0e3)
 
 
 ## How to Run
