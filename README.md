@@ -138,7 +138,8 @@ Test_Code(TaskB).ipynb
 | F1-Score   | 0.9738  |
 
 ### Task B (Face Verification)
-## Train Set                         ## Validation Set
+
+## Train Set                        ## Validation Set
 | Metric     | Value   |              | Metric     | Value   |                
 |------------|---------|              |------------|---------|
 | Accuracy   | 0.9888  |              | Accuracy   | 0.9880  |
