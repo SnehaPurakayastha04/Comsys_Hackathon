@@ -42,13 +42,21 @@ dataset/
 
 ## Evaluation Metrics
 
-After training and validation, the following metrics are computed:
+### Evaluation on Train Set:
+ - **Accuracy**: 0.9763
+- **Precision**: 0.9766
+- **Recall**   : 0.9763
+- **F1-Score** : 0.9760
+- **Train Set Confusion Matrix**
 
+![Screenshot 2025-07-05 143915](https://github.com/user-attachments/assets/28408579-6646-453b-8b1b-f7bade90ac55)
+
+### Evaluation on Validation Set:
 - **Accuracy** : 0.9739
 - **Precision**: 0.9738
 - **Recall**   : 0.9739
 - **F1-Score** : 0.9738
-- **Confusion Matrix**
+- **Validation Set Confusion Matrix**
   
     ![Screenshot 2025-07-02 235553](https://github.com/user-attachments/assets/87f096fc-7b2d-40ac-867c-81b9c14bc7da)
 
