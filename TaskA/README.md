@@ -43,24 +43,23 @@ dataset/
 ## Evaluation Metrics
 
 ### Evaluation on Train Set:
- - **Accuracy**: 0.9763
-- **Precision**: 0.9766
-- **Recall**   : 0.9763
-- **F1-Score** : 0.9760
+- **Accuracy**: 0.9990
+- **Precision**: 0.9990
+- **Recall**   : 0.9990
+- **F1-Score** : 0.9990
 
+![final_cropped_train_confusion_matrix](https://github.com/user-attachments/assets/2379d43e-28ed-4946-b5cc-8f95e4a75122)
 
-![final_cropped_confusion_matrix](https://github.com/user-attachments/assets/6c70340c-e0bb-4590-8d01-9d3d8745724a)
 
 
 ### Evaluation on Validation Set:
-- **Accuracy** : 0.9739
-- **Precision**: 0.9738
-- **Recall**   : 0.9739
-- **F1-Score** : 0.9738
+- **Accuracy**: 0.9763
+- **Precision**: 0.9766
+- **Recall**   : 0.9763
+- **F1-Score** : 0.9760
   
-  
-    ![Screenshot 2025-07-02 235553](https://github.com/user-attachments/assets/87f096fc-7b2d-40ac-867c-81b9c14bc7da)
-
+  ![final_cropped_confusion_matrix](https://github.com/user-attachments/assets/6c70340c-e0bb-4590-8d01-9d3d8745724a)
+    
 ## Model Weights
 Download the pre-trained model here.
 [taskA_model.pth(Google Drive)](https://drive.google.com/file/d/1XieLM15TYgOYpAZZd2u0-45m3P8KVb_u/view?usp=sharing)
