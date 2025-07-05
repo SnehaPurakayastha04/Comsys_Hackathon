@@ -47,7 +47,7 @@ dataset/
 - **Precision**: 0.9766
 - **Recall**   : 0.9763
 - **F1-Score** : 0.9760
-- **Train Set Confusion Matrix**
+
 
 ![final_cropped_confusion_matrix](https://github.com/user-attachments/assets/6c70340c-e0bb-4590-8d01-9d3d8745724a)
 
@@ -57,7 +57,7 @@ dataset/
 - **Precision**: 0.9738
 - **Recall**   : 0.9739
 - **F1-Score** : 0.9738
-- **Validation Set Confusion Matrix**
+  
   
     ![Screenshot 2025-07-02 235553](https://github.com/user-attachments/assets/87f096fc-7b2d-40ac-867c-81b9c14bc7da)
 
