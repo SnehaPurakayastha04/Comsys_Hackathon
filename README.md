@@ -129,13 +129,23 @@ Test_Code(TaskB).ipynb
 
 ##  Results Summary
 
-## Task A (Gender Classification)
+### Task A (Gender Classification)
+
+## Train Set
+| Metric     | Value   |                             
+|------------|---------|              
+| Accuracy   | 0.9990  |             
+| Precision  | 0.9990  |              
+| Recall     | 0.9990  |              
+| F1-Score   | 0.9990  | 
+
+## Validation Set
 | Metric     | Value   |
 |------------|---------|
-| Accuracy   | 0.9739  |
-| Precision  | 0.9738  |
-| Recall     | 0.9739  |
-| F1-Score   | 0.9738  |
+| Accuracy   | 0.9763  |
+| Precision  | 0.9766  |
+| Recall     | 0.9763  |
+| F1-Score   | 0.9760  |
 
 ### Task B (Face Verification)
 
