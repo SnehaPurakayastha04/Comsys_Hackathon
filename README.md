@@ -138,13 +138,14 @@ Test_Code(TaskB).ipynb
 | F1-Score   | 0.9738  |
 
 ### Task B (Face Verification)
-| Metric     | Value   |
-|------------|---------|
-| Accuracy   | 0.9836  |
-| Precision  | 0.9890  |
-| Recall     | 0.9890  |
-| F1-Score   | 0.9890  |
-| Best Threshold | 0.43 |
+## Train Set                         ## Validation Set
+| Metric     | Value   |              | Metric     | Value   |                
+|------------|---------|              |------------|---------|
+| Accuracy   | 0.9888  |              | Accuracy   | 0.9880  |
+| Precision  | 0.9964  |              | Precision  | 0.9945  |
+| Recall     | 0.9893  |              | Recall     | 0.9890  |
+| F1-Score   | 0.9929  |              | F1-Score   | 0.9917  |
+| Best Threshold | 0.44 |             | Best Threshold | 0.39 |
 
 ## Contributors
 
