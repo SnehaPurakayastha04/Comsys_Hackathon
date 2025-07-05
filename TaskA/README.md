@@ -48,8 +48,7 @@ dataset/
 - **Recall**   : 0.9990
 - **F1-Score** : 0.9990
 
-![final_cropped_train_confusion_matrix](https://github.com/user-attachments/assets/2379d43e-28ed-4946-b5cc-8f95e4a75122)
-
+![PHOTO-2025-07-05-17-06-54](https://github.com/user-attachments/assets/6bd7d517-7155-46a1-bcd9-45c2609e67ab)
 
 
 ### Evaluation on Validation Set:
