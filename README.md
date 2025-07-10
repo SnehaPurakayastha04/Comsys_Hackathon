@@ -33,9 +33,11 @@ Comsys_Hackathon5/
 Clone the repository:
 
 git clone https://github.com/SnehaPurakayastha04/Comsys_Hackathon.git
+
 cd Comsys_Hackathon
 
 Install required libraries:
+
 Install all dependencies using pip:
 
 pip install torch torchvision facenet-pytorch scikit-learn pandas matplotlib seaborn
