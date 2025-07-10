@@ -73,7 +73,7 @@ def evaluate(loader, name):
     plt.ylabel('True')
     plt.show()
 
-# ✅ Run Evaluation
+# Run Evaluation
 evaluate(train_loader, "Train")
 evaluate(val_loader, "Validation")
 
