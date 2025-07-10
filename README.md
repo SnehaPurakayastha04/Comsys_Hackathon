@@ -16,16 +16,16 @@ Comsys_Hackathon5/
 ├── train_verification_results.csv
 ├── val_verification_results.csv
 ├── TaskA/
-│ ├── test_code(taska).py
-│ ├── README.md
-│ ├── train_code(taska).py
-│ └── Task_A(Model Diagram).png
+│   ├── test_code(taska).py
+│   ├── README.md
+│   ├── train_code(taska).py
+│   └── Task_A(Model Diagram).png
 │
 ├── TaskB/
-│ ├── test_code(taskb).py
-│ ├── train_code(taskb).py
-| ├──README.md
-│ └── Task_B(Model Diagram).png
+│   ├── test_code(taskb).py
+│   ├── train_code(taskb).py
+|   ├──README.md
+│   └── Task_B(Model Diagram).png
 
 
 # Setup Instructions
