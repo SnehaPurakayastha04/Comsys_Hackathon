@@ -42,7 +42,7 @@ Install all dependencies using pip:
 
 pip install torch torchvision facenet-pytorch scikit-learn pandas matplotlib seaborn
 
-Download Model Weights:
+# Download Model Weight:
 
 Task A: [TaskA_best_gender_model(Google Drive)](https://drive.google.com/file/d/1U5ym2yO7IDumm9TrDusCn8xZpxnTvuet/view?usp=drive_link)
 
