@@ -51,13 +51,6 @@ Best Threshold: 0.44
 ![Screenshot 2025-07-05 091010](https://github.com/user-attachments/assets/48e0e47a-39c7-41e1-8c50-a82cd3e2b0e3)
 
 
-## How to Run
-
-- Open the notebook: Train_Code(TaskB).ipynb and Test_Code(TaskB).ipynb
-- Mount your Google Drive if needed
-- Set train_dir and val_dir to the correct dataset paths
-- Run all cells
-
 ## Contributors
 
 - Sneha Purakayastha(https://github.com/SnehaPurakayastha04)
