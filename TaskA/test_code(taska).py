@@ -1,12 +1,20 @@
 # Import Libraries
+import os
+import argparse
+import torch
+import torch.nn as nn
+import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 from torchvision import datasets, models, transforms
 from torch.utils.data import DataLoader
-import torch.nn as nn
-import torch
 from torchvision.models import ResNet50_Weights
-import matplotlib.pyplot as plt
-import seaborn as sns
+
+# Parse Command Line Arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('--test_folder', type=str, required=True, help='Path to the test folder')
+args = parser.parse_args()
+test_folder = args.test_folder
 
 # Define Paths
 train_data_path = os.path.join(test_folder, 'Task_A', 'train')
@@ -58,7 +66,7 @@ def evaluate(loader, name):
     rec = recall_score(all_labels, all_preds, average='weighted')
     f1 = f1_score(all_labels, all_preds, average='weighted')
 
-    print(f"\n {name} Results:")
+    print(f"\n{name} Results:")
     print(f"Accuracy : {acc:.4f}")
     print(f"Precision: {prec:.4f}")
     print(f"Recall   : {rec:.4f}")
@@ -77,4 +85,5 @@ def evaluate(loader, name):
 evaluate(train_loader, "Train")
 evaluate(val_loader, "Validation")
 
+# Optionally save model
 torch.save(model.state_dict(),'taskA_model.pth')
