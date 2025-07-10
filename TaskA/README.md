@@ -30,15 +30,6 @@ dataset/
 - Fully Connected → ReLU → Dropout
 - Final Layer: Output = 2 (Male / Female)
 
-## How to Run
-
-> This notebook was developed and tested on **Google Colab**.
-
-1. Open the notebook: `New_Task_A.ipynb`
-2. Mount your Google Drive if needed
-3. Set `train_dir` and `val_dir` to the correct dataset paths
-4. Run all cells
-
 
 ## Evaluation Metrics
 
@@ -59,9 +50,6 @@ dataset/
   
   ![final_cropped_confusion_matrix](https://github.com/user-attachments/assets/6c70340c-e0bb-4590-8d01-9d3d8745724a)
     
-## Model Weights
-Download the pre-trained model here.
-[taskA_model.pth(Google Drive)](https://drive.google.com/file/d/1XieLM15TYgOYpAZZd2u0-45m3P8KVb_u/view?usp=sharing)
 
 ##  Best Gender Model
 
