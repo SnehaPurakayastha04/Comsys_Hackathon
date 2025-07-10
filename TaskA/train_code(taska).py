@@ -1,20 +1,26 @@
-# Install dependencies (if needed)
-!pip install torch torchvision matplotlib --quiet
-
 import os
+import argparse
 import torch
 import torchvision
+import torch.nn as nn
+import torch.optim as optim
 import torchvision.transforms as transforms
 from torchvision import datasets, models
 from torch.utils.data import DataLoader
-import torch.nn as nn
-import torch.optim as optim
 from torchvision.models import ResNet50_Weights
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 import matplotlib.pyplot as plt
 
-# Paths (Change if needed)
-train_dir = '/content/drive/MyDrive/Comys_Hackathon5/Comys_Hackathon5/Task_A/train'
-val_dir = '/content/drive/MyDrive/Comys_Hackathon5/Comys_Hackathon5/Task_A/val'
+# Argument Parser
+parser = argparse.ArgumentParser()
+parser.add_argument('--train_folder', type=str, required=True, help='Path to training data')
+parser.add_argument('--val_folder', type=str, required=True, help='Path to validation data')
+parser.add_argument('--save_path', type=str, default='best_gender_model.pth', help='Path to save best model')
+args = parser.parse_args()
+
+train_dir = args.train_folder
+val_dir = args.val_folder
+model_save_path = args.save_path
 
 # Transforms
 transform_train = transforms.Compose([
@@ -48,6 +54,7 @@ model.fc = nn.Sequential(
     nn.Dropout(0.5),
     nn.Linear(256, 2)
 )
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 
@@ -76,10 +83,9 @@ for epoch in range(epochs):
 
     scheduler.step()
 
-    # Validation
+    # Validation Accuracy
     model.eval()
-    correct = 0
-    total = 0
+    correct, total = 0, 0
     with torch.no_grad():
         for inputs, labels in val_loader:
             inputs, labels = inputs.to(device), labels.to(device)
@@ -94,7 +100,7 @@ for epoch in range(epochs):
     if val_acc > best_acc:
         best_acc = val_acc
         wait = 0
-        torch.save(model.state_dict(), '/content/best_gender_model.pth')  
+        torch.save(model.state_dict(), model_save_path)
     else:
         wait += 1
         if wait >= patience:
@@ -103,7 +109,7 @@ for epoch in range(epochs):
 
 print(f"Best Validation Accuracy: {best_acc:.2f}%")
 
-# Evaluate Train & Val sets
+# Evaluation Function
 def evaluate(loader, name):
     model.eval()
     preds, labels_all = [], []
@@ -118,11 +124,12 @@ def evaluate(loader, name):
     prec = precision_score(labels_all, preds, average='weighted')
     rec = recall_score(labels_all, preds, average='weighted')
     f1 = f1_score(labels_all, preds, average='weighted')
-    print(f"\n {name} Metrics:")
+    print(f"\n{name} Metrics:")
     print(f"Accuracy : {acc:.4f}")
     print(f"Precision: {prec:.4f}")
     print(f"Recall   : {rec:.4f}")
     print(f"F1-Score : {f1:.4f}")
 
+# Final Evaluation
 evaluate(train_loader, "Train")
 evaluate(val_loader, "Validation")
