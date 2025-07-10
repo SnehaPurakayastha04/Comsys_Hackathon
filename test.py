@@ -1,6 +1,6 @@
-# ✅ Combined test.py script for Colab (Task A & B)
+# COMSYS Hackathon - Final Test Script
+# Tasks: A (Gender Classification), B (Face Verification)
 
-import sys
 import argparse
 import os
 import torch
@@ -14,13 +14,12 @@ from torch.utils.data import DataLoader
 import torch.nn as nn
 from torchvision.models import ResNet50_Weights
 
-# ✅ Simulate argparse for Colab
-sys.argv = ['test.py', '--task', 'A', '--test_folder', '/content/drive/MyDrive/Comys_Hackathon5/Comys_Hackathon5']
+# Classification Evaluation (Task A)
 
-# ✅ Evaluation for Classification (Task A)
 def evaluate_classification(model, loader, class_names, device, name="Validation"):
     model.eval()
     all_preds, all_labels = [], []
+
     with torch.no_grad():
         for inputs, labels in loader:
             inputs = inputs.to(device)
@@ -34,7 +33,7 @@ def evaluate_classification(model, loader, class_names, device, name="Validation
     rec = recall_score(all_labels, all_preds, average='weighted')
     f1 = f1_score(all_labels, all_preds, average='weighted')
 
-    print(f"\n\U0001F4CA {name} Results:")
+    print(f"\n{name} Results:")
     print(f"Accuracy : {acc:.4f}")
     print(f"Precision: {prec:.4f}")
     print(f"Recall   : {rec:.4f}")
@@ -42,17 +41,19 @@ def evaluate_classification(model, loader, class_names, device, name="Validation
 
     cm = confusion_matrix(all_labels, all_preds)
     plt.figure(figsize=(6, 4))
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+                xticklabels=class_names, yticklabels=class_names)
     plt.title(f'{name} Confusion Matrix')
     plt.xlabel('Predicted')
     plt.ylabel('True')
     plt.show()
 
-# ✅ Run Task A
+# Run Task A: Gender Classification
 
 def run_task_a(test_folder):
-    print("\n\u25B6\ufe0f Running Task A: Gender Classification")
-    model_path = os.path.join("/content/drive/MyDrive/best_gender_model.pth")
+    print("\nRunning Task A: Gender Classification")
+
+    model_path = "best_gender_model.pth"  # Ensure this file is in the root repo
 
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
@@ -76,6 +77,7 @@ def run_task_a(test_folder):
         nn.Dropout(0.5),
         nn.Linear(256, 2)
     )
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.load_state_dict(torch.load(model_path, map_location=device))
     model = model.to(device)
@@ -83,12 +85,13 @@ def run_task_a(test_folder):
     evaluate_classification(model, train_loader, class_names, device, name="Train")
     evaluate_classification(model, val_loader, class_names, device, name="Validation")
 
-# ✅ Evaluation for Verification (Task B)
+# Verification Evaluation (Task B)
 
 def evaluate_verification(df, dataset_name='Dataset'):
     y_true = df['label'].tolist()
     best_thresh = 0.5
     best_f1 = 0
+
     for thresh in np.arange(0.3, 0.8, 0.01):
         preds = [1 if s >= thresh else 0 for s in df['similarity']]
         f1 = f1_score(y_true, preds)
@@ -102,8 +105,8 @@ def evaluate_verification(df, dataset_name='Dataset'):
     rec = recall_score(y_true, y_pred)
     f1 = f1_score(y_true, y_pred)
 
-    print(f"\n\U0001F4CA Evaluation on {dataset_name}:")
-    print(f"\U0001F50D Best Threshold: {best_thresh:.2f}")
+    print(f"\nEvaluation on {dataset_name}:")
+    print(f"Best Threshold: {best_thresh:.2f}")
     print(f"Accuracy : {acc:.4f}")
     print(f"Precision: {prec:.4f}")
     print(f"Recall   : {rec:.4f}")
@@ -112,24 +115,29 @@ def evaluate_verification(df, dataset_name='Dataset'):
     cm = confusion_matrix(y_true, y_pred)
     labels = ['Negative (0)', 'Positive (1)']
     plt.figure(figsize=(6, 4))
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=labels, yticklabels=labels)
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+                xticklabels=labels, yticklabels=labels)
     plt.title(f'{dataset_name} Confusion Matrix')
     plt.xlabel('Predicted')
     plt.ylabel('True')
     plt.show()
 
-# ✅ Run Task B
+# Run Task B: Face Verification
 
 def run_task_b(test_folder):
-    print("\n\u25B6\ufe0f Running Task B: Face Verification")
+    print("\nRunning Task B: Face Verification")
+
     train_csv = os.path.join(test_folder, 'train_verification_results.csv')
     val_csv = os.path.join(test_folder, 'val_verification_results.csv')
+
     df_train = pd.read_csv(train_csv)
     df_val = pd.read_csv(val_csv)
+
     evaluate_verification(df_train, dataset_name='Train Set')
     evaluate_verification(df_val, dataset_name='Validation Set')
 
-# ✅ Main
+
+# Main Entry Point
 
 def main():
     parser = argparse.ArgumentParser()
