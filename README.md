@@ -11,15 +11,19 @@ This repository contains the complete implementation for both tasks of the COMSY
 ## Repository Structure
 
 Comsys_Hackathon5/
+├── test.py
+├── README.md
+├── train_verification_results.csv
+├── val_verification_results.csv
 ├── TaskA/
 │ ├── test_code(taska).py
 │ ├── README.md
+│ ├── train_code(taska).py
 │ └── Task_A(Model Diagram).png
 │
 ├── TaskB/
 │ ├── test_code(taskb).py
-│ ├── train_verification_results.csv
-| ├── val_verification_results.csv
+│ ├── train_code(taskb).py
 | ├──README.md
 │ └── Task_B(Model Diagram).png
 
@@ -42,15 +46,16 @@ Task A: [TaskA_best_gender_model(Google Drive)](https://drive.google.com/file/d/
 
 Task B: [TaskB_model(Google Drive)](https://drive.google.com/file/d/1lrgSgV2Bado7IATlQJEHL5o3ENDaSL6m/view?usp=drive_link)
 
-# Important: After downloading, please place best_gender_model.pth in the same directory as test.py (root of the repository) before running the script.
+# Important: After downloading, place best_gender_model.pth in the same directory as test.py (root of the repository) before running the script.
 
 # How to Run
 
-Run the final test script:
+Run the final test script from the root directory:
 
-python test.py --test_folder /path/to/test/folder
+python test.py --task A --test_folder /path/to/test/folder
+python test.py --task B --test_folder /path/to/test/folder
+The --test_folder should match the folder structure used during validation.
 
-The --test_folder should follow the same structure as the validation folder used during training.
 
 # Output Format
 
