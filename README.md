@@ -11,18 +11,57 @@ This repository contains the complete implementation for both tasks of the COMSY
 ## Repository Structure
 
 Comsys_Hackathon5/
-├── TaskA_Gender_Classification/
-│ ├── TaskA_Gender_Classification.ipynb
-│ ├── taskA_model.pth
-│ └── README.md
+├── TaskA/
+│ ├── test_code(taska).py
+│ ├── README.md
+│ └── Task_A(Model Diagram).png
 │
-├── TaskB_Face_Verification/
-│ ├── TaskB_Face_Verification.ipynb
-│ ├── taskB_model.pth
-│ └── README.md
+├── TaskB/
+│ ├── test_code(taskb).py
+│ ├── train_verification_results.csv
+| ├── val_verification_results.csv
+| ├──README.md
+│ └── Task_B(Model Diagram).png
 
 
+# Setup Instructions
 
+Clone the repository:
+
+git clone https://github.com/SnehaPurakayastha04/Comsys_Hackathon.git
+cd Comsys_Hackathon
+
+Install required libraries:
+Install all dependencies using pip:
+
+pip install torch torchvision facenet-pytorch scikit-learn pandas matplotlib seaborn
+
+Download Model Weights:
+
+Task A: [https://drive.google.com/file/d/1U5ym2yO7IDumm9TrDusCn8xZpxnTvuet/view?usp=drive_link]
+
+Task B: [https://drive.google.com/file/d/1lrgSgV2Bado7IATlQJEHL5o3ENDaSL6m/view?usp=drive_link]
+
+
+# How to Run
+
+Run the final test script:
+
+python test.py --test_folder /path/to/test/folder
+
+The --test_folder should follow the same structure as the validation folder used during training.
+
+# Output Format
+
+The script prints performance metrics separately for Task A and Task B, for both train and validation datasets:
+
+Task A:
+Train Results: Accuracy, Precision, Recall, F1-Score, Confusion Matrix
+Validation Results: Accuracy, Precision, Recall, F1-Score, Confusion Matrix
+
+Task B:
+Train Set: Accuracy, Precision, Recall, F1-Score, Confusion Matrix
+Validation Set: Accuracy, Precision, Recall, F1-Score, Confusion Matrix
 
 ## Task A: Gender Classification
 
@@ -49,26 +88,6 @@ Optimizer: AdamW with learning rate decay via StepLR
 Regularization via Dropout + Data augmentation
 Early Stopping based on validation accuracy
 
-###  Evaluation Metrics:
-- Accuracy
-- Precision
-- Recall
-- F1-score
-
-### Files:
-- `TaskA_Gender_Classification.ipynb` – Colab notebook for training & evaluation
-- `taskA_model.pth` – Pretrained weights
-- `README.md` – Task A overview and instructions
-
-## Instructions to Run
-cd TaskA
-## Run training (Google Colab preferred)
-Train_Code(TaskA).ipynb
-
-## Run evaluation
-Test_Code(TaskA).ipynb
-
----
 
 ## Task B: Face Verification
 
@@ -100,32 +119,6 @@ val/
 - Tuned threshold based on validation F1-score
 - Included **negative matches** for generalizability
 
-### Evaluation Metrics:
-- Accuracy
-- Precision
-- Recall
-- F1-score
-
-### Files:
-- `TaskB_Face_Verification.ipynb` – End-to-end training, testing, and metric computation
-- `taskB_model.pth` – FaceNet model weights (optional, FaceNet can be loaded in Colab too)
-- `README.md` – Task B overview and instructions
-
----
-
-##  How to Run
-
-> You can open and run each task's notebook directly in **Google Colab**.
-
-## Instructions to Run
-cd TaskB
-## Run verification & save CSVs
-Train_Code(TaskB).ipynb
-
-## Evaluate metrics using optimal threshold
-Test_Code(TaskB).ipynb
-
----
 
 ##  Results Summary
 
