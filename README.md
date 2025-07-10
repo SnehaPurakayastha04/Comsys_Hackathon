@@ -42,6 +42,7 @@ Task A: [TaskA_best_gender_model(Google Drive)](https://drive.google.com/file/d/
 
 Task B: [TaskB_model(Google Drive)](https://drive.google.com/file/d/1lrgSgV2Bado7IATlQJEHL5o3ENDaSL6m/view?usp=drive_link)
 
+# Important: After downloading, please place best_gender_model.pth in the same directory as test.py (root of the repository) before running the script.
 
 # How to Run
 
