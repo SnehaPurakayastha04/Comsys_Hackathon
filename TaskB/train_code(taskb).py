@@ -1,8 +1,6 @@
-#  STEP 1: Install Required Libraries
-!pip install torch torchvision facenet-pytorch scikit-learn matplotlib pandas --quiet
-
-# STEP 2: Import Libraries
-import os, random
+import os
+import random
+import argparse
 import torch
 import numpy as np
 import pandas as pd
@@ -11,12 +9,11 @@ from tqdm import tqdm
 from sklearn.metrics.pairwise import cosine_similarity
 from facenet_pytorch import InceptionResnetV1, MTCNN
 
-# STEP 3: Setup
+# Setup device and models
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = InceptionResnetV1(pretrained='vggface2').eval().to(device)
 mtcnn = MTCNN(image_size=160, margin=10, device=device)
 
-# STEP 4: Embedding Function
 @torch.no_grad()
 def get_augmented_embeddings(img_path, n_augments=3):
     img = Image.open(img_path).convert('RGB')
@@ -43,12 +40,11 @@ def get_augmented_embeddings(img_path, n_augments=3):
 
     return np.mean(embeddings, axis=0)
 
-# STEP 5: Verification Function
 def verify_from_folder(folder_path, save_csv_path, use_negatives=True, negatives_per_sample=3):
     results = []
     person_list = os.listdir(folder_path)
 
-    for person_id in tqdm(person_list, desc=f"Processing {folder_path}"):
+    for person_id in tqdm(person_list, desc=f"Processing {os.path.basename(folder_path)}"):
         person_dir = os.path.join(folder_path, person_id)
         ref_img_path = os.path.join(person_dir, f"{person_id}.jpg")
         distortion_folder = os.path.join(person_dir, "distortion")
@@ -94,12 +90,23 @@ def verify_from_folder(folder_path, save_csv_path, use_negatives=True, negatives
 
     df = pd.DataFrame(results)
     df.to_csv(save_csv_path, index=False)
-    print(f" Saved results to {save_csv_path}")
+    print(f"Saved results to {save_csv_path}")
     return df
 
-# STEP 6: Run on Train and Validation
-train_dir = '/content/drive/MyDrive/Comys_Hackathon5/Comys_Hackathon5/Task_B/train'
-val_dir = '/content/drive/MyDrive/Comys_Hackathon5/Comys_Hackathon5/Task_B/val'
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--train_folder', type=str, required=True, help='Path to Task_B train folder')
+    parser.add_argument('--val_folder', type=str, required=True, help='Path to Task_B val folder')
+    parser.add_argument('--output_dir', type=str, default='.', help='Where to save output CSVs')
+    args = parser.parse_args()
 
-df_train = verify_from_folder(train_dir, '/content/train_verification_results.csv')
-df_val = verify_from_folder(val_dir, '/content/val_verification_results.csv')
+    os.makedirs(args.output_dir, exist_ok=True)
+
+    train_csv = os.path.join(args.output_dir, 'train_verification_results.csv')
+    val_csv = os.path.join(args.output_dir, 'val_verification_results.csv')
+
+    verify_from_folder(args.train_folder, train_csv)
+    verify_from_folder(args.val_folder, val_csv)
+
+if __name__ == '__main__':
+    main()
