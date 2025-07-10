@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Define Paths
-train_data_path = '/content/drive/MyDrive/Comys_Hackathon5/Comys_Hackathon5/Task_A/train'
-val_data_path = '/content/drive/MyDrive/Comys_Hackathon5/Comys_Hackathon5/Task_A/val'
-model_path = '/content/best_gender_model.pth'
+train_data_path = os.path.join(test_folder, 'Task_A', 'train')
+val_data_path = os.path.join(test_folder, 'Task_A', 'val')
+model_path = 'best_gender_model.pth'  # Must be placed in root with test.py
 
 # Load Data
 transform = transforms.Compose([
