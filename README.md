@@ -55,7 +55,9 @@ Task B: [TaskB_model(Google Drive)](https://drive.google.com/file/d/1lrgSgV2Bado
 Run the final test script from the root directory:
 
 python test.py --task A --test_folder /path/to/test/folder
+
 python test.py --task B --test_folder /path/to/test/folder
+
 Ensure /test_folder/Task_A/val/ and /test_folder/Task_B/val/ follow the same structure used during training.
 
 
