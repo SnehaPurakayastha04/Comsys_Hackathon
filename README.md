@@ -42,11 +42,11 @@ pip install torch torchvision facenet-pytorch scikit-learn pandas matplotlib sea
 
 Download Model Weights:
 
-Task A: [TaskA_best_gender_model(Google Drive)](https://drive.google.com/file/d/1U5ym2yO7IDumm9TrDusCn8xZpxnTvuet/view?usp=drive_link])
+Task A: [TaskA_best_gender_model(Google Drive)](https://drive.google.com/file/d/1U5ym2yO7IDumm9TrDusCn8xZpxnTvuet/view?usp=drive_link)
 
 Task B: [TaskB_model(Google Drive)](https://drive.google.com/file/d/1lrgSgV2Bado7IATlQJEHL5o3ENDaSL6m/view?usp=drive_link)
 
-# Important: After downloading, place best_gender_model.pth in the same directory as test.py (root of the repository) before running the script.
+## Important: Download best_gender_model.pth from the above link and place it in the root directory (same location as test.py) before running Task A.
 
 # How to Run
 
@@ -54,7 +54,7 @@ Run the final test script from the root directory:
 
 python test.py --task A --test_folder /path/to/test/folder
 python test.py --task B --test_folder /path/to/test/folder
-The --test_folder should match the folder structure used during validation.
+Ensure /test_folder/Task_A/val/ and /test_folder/Task_B/val/ follow the same structure used during training.
 
 
 # Output Format
